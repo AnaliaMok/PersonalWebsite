@@ -10,19 +10,6 @@ html, body{
     overflow-x: hidden;
 }
 
-/*
-img.mtn_bkg{
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-*/
-
-/* Desktop image won't show for mobile */
-/*img#mtn_desk{
-    display: none;
-}*/
-
 main{
     height: 100vh;
     width: 100vw;
@@ -50,18 +37,33 @@ main div#overlay{
 div#content{
     text-align: center;
     display: inline-block;
+    position: relative;
+    width: 50%;
 }
 
 /* Name and Major Styling */
-main div#content span#logo{
+main div#content span#logo, h2#title{
     display: inline-block;
     padding: 0.5em 1em;
     color: #FFFFFF;
     font-family: Oswald, sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     border: 5px solid #fff;
     opacity: 1;
-/*    margin: 3%;*/
+    margin-top: 10%;
+}
+
+h2#title{
+    display: inline-block;
+    padding: 0.4em 1.5em;
+    font-weight: 600; /* Medium */
+}
+
+div#content p{
+    display: inline-block;
+    color: #FFFFFF;
+    text-align: left;
+    font-family: "Open Sans", sans-serif
 }
 
 @media only screen and (min-width: 768px){
@@ -74,9 +76,17 @@ main div#content span#logo{
         background-size: cover;
     }
     
+    main div#content{
+        width: 25%;
+    }
+    
     /* Position logo to upper left */
     main span#logo{
-        float: left;
+/*        float: left;*/
+    }
+    
+    h2#title{
+        clear: left;
     }
     
 }
