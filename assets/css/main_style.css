@@ -1,0 +1,82 @@
+/* 
+    File Name: main_style.css
+    Description: Main stylesheet used by index.html
+    @author: Analia Mok
+*/
+
+html, body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/*
+img.mtn_bkg{
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+*/
+
+/* Desktop image won't show for mobile */
+/*img#mtn_desk{
+    display: none;
+}*/
+
+main{
+    height: 100vh;
+    width: 100vw;
+    background: url("../images/herofiveHalf.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    z-index: -2;
+}
+
+main div#overlay{
+    background-color: #2D2D2D;
+    opacity: 0.70;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Main Content Holder */
+div#content{
+    text-align: center;
+    display: inline-block;
+}
+
+/* Name and Major Styling */
+main div#content span#logo{
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: #FFFFFF;
+    font-family: Oswald, sans-serif;
+    font-weight: bold;
+    border: 5px solid #fff;
+    opacity: 1;
+/*    margin: 3%;*/
+}
+
+@media only screen and (min-width: 768px){
+    /* Switch images used for background */
+    main{
+        /* Bkg properties are not inheritable */
+        background: url("../images/herofive-min.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    
+    /* Position logo to upper left */
+    main span#logo{
+        float: left;
+    }
+    
+}
