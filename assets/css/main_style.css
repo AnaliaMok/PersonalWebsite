@@ -92,7 +92,10 @@ div.icon_holder span{
     margin: 0 3%;
     font-size: 3em;
     color: #fff;
-    
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
 }
 
 /* #18B1F9 */
