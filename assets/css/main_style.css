@@ -8,6 +8,8 @@ html, body{
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    position: relative;
+    z-index: -3;
 }
 
 main{
@@ -38,11 +40,12 @@ div#content{
     text-align: center;
     display: inline-block;
     position: relative;
+    top: 10%;
     width: 50%;
 }
 
 /* Name and Major Styling */
-main div#content span#logo, h2#title{
+span#logo, h2#title{
     display: inline-block;
     padding: 0.5em 1em;
     color: #FFFFFF;
@@ -50,20 +53,51 @@ main div#content span#logo, h2#title{
     font-weight: 600;
     border: 5px solid #fff;
     opacity: 1;
-    margin-top: 10%;
+}
+
+span#logo{
+    margin-top: 5%;
 }
 
 h2#title{
-    display: inline-block;
+    display: block;
     padding: 0.4em 1.5em;
     font-weight: 600; /* Medium */
+    margin-top: 10%;
+    margin-bottom: 0;
 }
 
 div#content p{
     display: inline-block;
     color: #FFFFFF;
     text-align: left;
-    font-family: "Open Sans", sans-serif
+    font-family: "Open Sans", sans-serif;
+    margin: 10% 0;
+}
+
+/* Line Division to separate sections */
+div#content div.line_divider{
+    border: 3px solid #fff;
+}
+
+div.icon_holder{
+    padding: 3%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Icon Links */
+div.icon_holder span{
+    display: inline-block;
+    margin: 0 3%;
+    font-size: 3em;
+    color: #fff;
+    
+}
+
+/* #18B1F9 */
+div.icon_holder span:hover{
+    color: #18B1F9;
 }
 
 @media only screen and (min-width: 768px){
@@ -77,16 +111,16 @@ div#content p{
     }
     
     main div#content{
-        width: 25%;
+        width: 30%;
     }
     
     /* Position logo to upper left */
     main span#logo{
-/*        float: left;*/
+
     }
     
     h2#title{
-        clear: left;
+        margin-top: 5%;
     }
     
 }
