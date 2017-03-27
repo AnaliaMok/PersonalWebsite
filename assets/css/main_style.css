@@ -76,7 +76,7 @@ div#content p{
 }
 
 /* Line Division to separate sections */
-div#content div.line_divider{
+div.line_divider{
     border: 3px solid #fff;
 }
 
@@ -98,9 +98,26 @@ div.icon_holder span{
     transition: color 0.5s;
 }
 
-/* #18B1F9 */
 div.icon_holder span:hover{
     color: #18B1F9;
+}
+
+/* Footer Styling */
+footer{
+    position: absolute;
+    left: 0;
+    bottom: 2%;
+    text-align: center;
+}
+
+footer p{
+    font-family: "Open Sans";
+    color: #fff;
+}
+
+footer p a{
+    color: #18B1F9;
+    text-decoration: none;
 }
 
 @media only screen and (min-width: 768px){
