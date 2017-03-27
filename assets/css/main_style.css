@@ -20,6 +20,10 @@ main{
     background-position: center;
     background-size: cover;
     position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     text-align: center;
     z-index: -2;
 }
@@ -36,12 +40,12 @@ main div#overlay{
 }
 
 /* Main Content Holder */
-div#content{
+div#content, div#temp_footer{
     text-align: center;
     display: inline-block;
     position: relative;
-    top: 10%;
-    width: 50%;
+    top: 9%;
+    width: 65%;
 }
 
 /* Name and Major Styling */
@@ -63,7 +67,7 @@ h2#title{
     display: block;
     padding: 0.4em 1.5em;
     font-weight: 600; /* Medium */
-    margin-top: 10%;
+/*    margin-top: 10%;*/
     margin-bottom: 0;
 }
 
@@ -84,6 +88,7 @@ div.icon_holder{
     padding: 3%;
     position: relative;
     z-index: 10;
+    margin-bottom: 2%;
 }
 
 /* Icon Links */
@@ -110,12 +115,17 @@ footer{
     text-align: center;
 }
 
-footer p{
+p#attribution{
+    display: block;
     font-family: "Open Sans";
     color: #fff;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
-footer p a{
+p#attribution a{
     color: #18B1F9;
     text-decoration: none;
 }
@@ -130,17 +140,33 @@ footer p a{
         background-size: cover;
     }
     
-    main div#content{
-        width: 30%;
+    main div#content, div#temp_footer{
+        display: block;
+        width: 37%;
+        margin: auto;
+        vertical-align: middle;
+        top: 15%;
+    }
+
+    div#temp_footer{
+        width: 100%;
     }
     
     /* Position logo to upper left */
     main span#logo{
-
+        margin: 0;
+        display: block;
+        position: absolute;
+        top: 2%;
+        left: 2%;
     }
     
     h2#title{
-        margin-top: 5%;
+        margin-top: 0;
+    }
+    
+    div#content p{
+        margin: 5% 0;
     }
     
 }
