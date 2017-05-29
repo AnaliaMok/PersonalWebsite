@@ -1,7 +1,6 @@
 # PersonalWebsite
 ##Purpose:
-This is currently a development repository for my personal website. The actual site is hosted on GitHub Page
-- which is being served by a different public repository. At the moment, the hosted site is an "Under Construction"
+This is currently a development repository for my personal website. The actual site is hosted on GitHub Page, which is being served by a different public repository. At the moment, the hosted site is an "Under Construction"
 page with minimal content.
 
 ##What will be included in the website?
