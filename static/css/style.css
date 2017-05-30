@@ -72,9 +72,10 @@ div.triangle-down{
     /*position: absolute;
     bottom: -25%;
     z-index: 100;*/
-    display: inline-block;
+    display: block;
     width: 0;
     height: 0;
+    margin: 0 auto 2rem auto;
     /*background-color: #2B2B2B;*/
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
@@ -96,8 +97,8 @@ nav ul{
     padding: 0;
     display: none;
     position: absolute;
-    top: 3.1em;
-    right: 1rem;
+    top: 3em;
+    right: 0;
 }
 
 nav ul li{
@@ -108,14 +109,18 @@ nav ul li{
 
 nav ul li a{
     display: block;
-    /*padding: 1em;*/
+    padding: 0.5em 1em 0.5em 1.5em;
     text-decoration: none;
-    color: #fff;
+    color: #e1e1e1;
     font-family: Oswald, sans-serif;
+    font-weight: 500;
+    /*text-shadow: -4px 0 6px black;*/
+    background-color: rgba(43, 43, 43, 0.8);
 }
 
 nav ul li a:hover{
     text-decoration: underline;
+    background-color: rgb(43, 43, 43);
 }
 
 /* Nav Menu Icon */
@@ -156,11 +161,107 @@ div.menu-icon div#three{
 }
 
 #main-nav div.menu-icon:hover div{
-    width: 2em;
+    width: 2em !important;
 }
 
 main{
     text-align: center;
+}
+
+main img#profile-pic{
+    display: block;
+    width: 35vw;
+    height: auto;
+    margin: 2rem auto;
+    border-radius: 25px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.55);
+}
+
+main div.content{
+    width: 90%;
+    margin: 0 auto;
+}
+
+main div.content h2{
+    color: #18B1F9;
+}
+
+main div.content p{
+    text-align: left;
+    color: #2D2D2D;
+}
+
+/* Footer Styling */
+footer{
+    margin-top: 4rem;
+    padding: 1em;
+    background-color: #2B2B2B;
+    clear: both;
+}
+
+footer div ul li a,
+footer div h2{
+    color: #18B1F9;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 0;
+}
+
+footer div ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer div ul li{
+    margin: 0.5em 0;
+}
+
+footer div ul li a{
+    display: block;
+    text-decoration: none;
+}
+
+footer div#mid-footer ul li a{
+    color: #fff;
+    font-weight: 400;
+}
+
+footer div#socials-container ul{
+    margin: 0.5em 0 1.5em 0;
+}
+
+footer div#socials-container ul li{
+    display: inline-block;
+    margin: 0 1em 0 0;
+}
+footer div#socials-container ul li a span{
+    display: inline-block;
+    font-size: 3em;
+    color: #ECECEC;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+footer div#socials-container ul li a:hover span{
+    color: #18B1F9;
+}
+
+footer p{
+    margin: 0.5rem 0 0 0;
+    color: #FCFCFC;
+}
+
+p#attribution{
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+
+p#attribution a{
+    color: #18B1F9;
+    text-decoration: none;
 }
 
 @media screen and (min-width: 768px){
@@ -179,6 +280,78 @@ main{
         display: inline-block !important;
         margin: 1em;
         position: static;
+    }
+
+    /* Removing background color and padding */
+    nav ul li a{
+        background-color: transparent;
+        padding: 0;
+    }
+
+    nav ul li a:hover{
+        background-color: transparent;
+    }
+
+    main{
+        width: 60%;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+
+    /* Content Wrapper */
+    main img#profile-pic{
+        display: inline-block;
+        vertical-align: top;
+        width: 18vw;
+        height: auto;
+        float: right;
+        margin-left: 2rem;
+        margin-top: 2rem;
+    }
+
+    main div.content{
+        display: inline-block;
+        width: 50%;
+        margin: 0 0 2rem 0;
+        float: left;
+    }
+
+    main div.content h2{
+        text-align: left;
+    }
+
+    /* Footer Styling - Divs appear side-by-side */
+    footer{
+        text-align: center;
+        padding-top: 2rem;
+        margin-top: 5rem;
+    }
+
+    footer div{
+        display: inline-block;
+        vertical-align: top;
+        /*margin: 0 1rem;*/
+        text-align: left;
+    }
+
+    footer div h2{
+        margin-top: 0;
+    }
+
+    footer p{
+        margin-top: 1rem;
+    }
+
+    footer div ul li{
+        margin-top: 0;
+    }
+
+    footer div#mid-footer h2{
+        margin-bottom: 0.5em;
+    }
+
+    footer div#mid-footer{
+        margin: 0 1.5rem;
     }
 
 }
