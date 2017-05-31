@@ -46,14 +46,13 @@ div#header-content{
     margin-bottom: 2em;
 }
 
-
 div#header-content h2{
     padding: 0;
     font-family: Oswald, sans-serif;
     font-weight: 600;
     font-size: 3.5em;
     color: #F5F5F5;
-    margin: 0 0.5em;
+    margin: 0 0.5em 0.2em 0.5em;
 }
 
 div#header-content p{
@@ -82,6 +81,33 @@ div.triangle-down{
     border-top: 40px solid #2B2B2B;
 }
 
+/* Logo Styling */
+div#logo{
+    display: inline-block;
+    position: absolute;
+    top: 2vh;
+    bottom: 2vh;
+    left: 1em;
+}
+
+div#border{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    /*text-align: center;*/
+    color: #ECECEC;
+    position: relative;
+}
+
+div#logo div#border span{
+    position: relative;
+    top: 2vh;
+    bottom: 2vh;
+    left: 2vh;
+    font-family: Oswald, sans-serif;
+}
+
 /* Navigation Styling */
 nav{
     margin: 1em 0;
@@ -92,6 +118,18 @@ nav{
     text-align: center;
 }
 
+header.sticky-header nav{
+    position: static;
+    display: inline-block;
+    /*width: auto;*/
+    height: inherit;
+    text-align: center;
+    /* FIXME */
+    background-color: #2B2B2B;
+    margin: 0 auto;
+    padding: 5vh 0;
+}
+
 nav ul{
     margin: 0;
     padding: 0;
@@ -99,6 +137,11 @@ nav ul{
     position: absolute;
     top: 3em;
     right: 0;
+}
+
+header.sticky-header nav ul{
+    position: static;
+    top: 0;
 }
 
 nav ul li{
@@ -121,6 +164,12 @@ nav ul li a{
 nav ul li a:hover{
     text-decoration: underline;
     background-color: rgb(43, 43, 43);
+}
+
+/* Standard Header Styling */
+header.sticky-header{
+    position: fixed;
+    width: 100%;
 }
 
 /* Nav Menu Icon */
@@ -282,6 +331,11 @@ p#attribution a{
         position: static;
     }
 
+    header.sticky-header nav ul,
+    header.sticky-header nav ul li{
+        margin: 0 1em;
+    }
+
     /* Removing background color and padding */
     nav ul li a{
         background-color: transparent;
@@ -293,7 +347,7 @@ p#attribution a{
     }
 
     main{
-        width: 60%;
+        width: 65%;
         margin: 0 auto;
         overflow: hidden;
     }
@@ -301,12 +355,11 @@ p#attribution a{
     /* Content Wrapper */
     main img#profile-pic{
         display: inline-block;
-        vertical-align: top;
+        vertical-align: middle;
         width: 18vw;
         height: auto;
         float: right;
-        margin-left: 2rem;
-        margin-top: 2rem;
+        margin: 2rem;
     }
 
     main div.content{
