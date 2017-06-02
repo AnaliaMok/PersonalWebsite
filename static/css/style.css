@@ -90,8 +90,6 @@ div.triangle-down{
     border-top: 40px solid #2B2B2B;
 }
 
-
-
 div#border{
     width: 6vw;
     height: 6vw;
@@ -220,6 +218,36 @@ img#logo{
 
 header#hero-header img#logo{
     display: none;
+}
+
+/* Side Nav Styling */
+nav#side-nav{
+    display: inline-block;
+    width: 15%;
+    height: 100%;
+    position: static;
+    float: left;
+    background-color: #18B1F9;
+    margin: 0;
+}
+
+nav#side-nav ul,
+nav#side-nav ul li{
+    display: block !important;
+    text-align: left;
+    font-family: Roboto, sans-serif;
+}
+
+nav#side-nav ul li > ul{
+    margin-top: 0.5em;
+}
+
+nav#side-nav ul li > ul li{
+    margin-top: 0.25em;
+}
+
+nav#side-nav ul li a{
+    font-family: Roboto, sans-serif;
 }
 
 main{
@@ -377,8 +405,6 @@ p#attribution a{
         height: 100%;
         position: static;
         float: left;
-        background-color: #18B1F9;
-        margin: 0;
     }
 
     nav#side-nav ul,
@@ -386,6 +412,10 @@ p#attribution a{
         display: block !important;
         text-align: left;
         font-family: Roboto, sans-serif;
+    }
+
+    nav#side-nav ul li > ul li{
+        margin-top: 0.2em;
     }
 
     main{
