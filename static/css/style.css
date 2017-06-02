@@ -66,6 +66,14 @@ div#header-content p{
     margin: 0 1em 1em 1em;
 }
 
+/* Sticky Header Styling */
+header#sticky-header{
+    /*position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;*/
+}
+
 /* Downward pointing triangle */
 div.triangle-down{
     /*position: absolute;
@@ -82,12 +90,10 @@ div.triangle-down{
 }
 
 /* Logo Styling */
-div#logo{
+img#logo{
     display: inline-block;
-    position: absolute;
-    top: 2vh;
-    bottom: 2vh;
-    left: 1em;
+    width: 20%;
+    height: 20%;
 }
 
 div#border{
@@ -100,14 +106,6 @@ div#border{
     position: relative;
 }
 
-div#logo div#border span{
-    position: relative;
-    top: 2vh;
-    bottom: 2vh;
-    left: 2vh;
-    font-family: Oswald, sans-serif;
-}
-
 /* Navigation Styling */
 nav{
     margin: 1em 0;
@@ -118,30 +116,13 @@ nav{
     text-align: center;
 }
 
-header.sticky-header nav{
-    position: static;
-    display: inline-block;
-    /*width: auto;*/
-    height: inherit;
-    text-align: center;
-    /* FIXME */
-    background-color: #2B2B2B;
-    margin: 0 auto;
-    padding: 5vh 0;
-}
-
 nav ul{
+    display: none;
     margin: 0;
     padding: 0;
-    display: none;
     position: absolute;
     top: 3em;
     right: 0;
-}
-
-header.sticky-header nav ul{
-    position: static;
-    top: 0;
 }
 
 nav ul li{
@@ -164,12 +145,6 @@ nav ul li a{
 nav ul li a:hover{
     text-decoration: underline;
     background-color: rgb(43, 43, 43);
-}
-
-/* Standard Header Styling */
-header.sticky-header{
-    position: fixed;
-    width: 100%;
 }
 
 /* Nav Menu Icon */
@@ -213,15 +188,38 @@ div.menu-icon div#three{
     width: 2em !important;
 }
 
+/* Sticky Navigation Styling */
+header#sticky-header nav{
+    /* Zeroing out index nav */
+    position: static;
+    margin: 0;
+    z-index: 0;
+    background-color: #2B2B2B;
+    text-align: right;
+}
+
+header#sticky-header nav ul{
+    position: static;
+    margin: 0.5rem;
+}
+
+header#sticky-header div.menu-icon{
+    position: static;
+    margin: 1rem 1rem 1rem 0;
+}
+
 main{
     text-align: center;
 }
 
-main img#profile-pic{
-    display: block;
+main div#profile-pic{
+    display: inline-block;
     width: 35vw;
-    height: auto;
-    margin: 2rem auto;
+    height: 35vw;
+    background: url("../images/profile_pic.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 35%;
+    background-size: cover;
     border-radius: 25px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.55);
 }
@@ -331,11 +329,6 @@ p#attribution a{
         position: static;
     }
 
-    header.sticky-header nav ul,
-    header.sticky-header nav ul li{
-        margin: 0 1em;
-    }
-
     /* Removing background color and padding */
     nav ul li a{
         background-color: transparent;
@@ -346,6 +339,12 @@ p#attribution a{
         background-color: transparent;
     }
 
+    /* Sticky Header Stylign */
+    header#sticky-header nav{
+        /* Nav items should be center aligned */
+        text-align: center;
+    }
+
     main{
         width: 65%;
         margin: 0 auto;
@@ -353,11 +352,11 @@ p#attribution a{
     }
 
     /* Content Wrapper */
-    main img#profile-pic{
+    main div#profile-pic{
         display: inline-block;
         vertical-align: middle;
-        width: 18vw;
-        height: auto;
+        width: 20vw;
+        height: 20vw;
         float: right;
         margin: 2rem;
     }

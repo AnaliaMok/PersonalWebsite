@@ -1,6 +1,6 @@
 # Uncomment before generating static files
 # baseURL = "https://analiamok.github.io/"
-#baseURL = "https://localhost:1313/"
+baseURL = "https://localhost:1313/"
 languageCode = "en-us"
 title = "Analia Mok"
 #MetaDataFormat = "md"
