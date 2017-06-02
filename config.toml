@@ -3,4 +3,5 @@
 baseURL = "https://localhost:1313/"
 languageCode = "en-us"
 title = "Analia Mok"
-#MetaDataFormat = "md"
+copyright = "Copyright &copy; Analia Mok 2017 All Rights Reserved"
+MetaDataFormat = "md"

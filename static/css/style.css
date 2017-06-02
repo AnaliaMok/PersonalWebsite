@@ -13,6 +13,7 @@ html, body{
     margin: 0;
     padding: 0;
     width: 100%;
+    height: 100%;
 }
 
 
@@ -89,12 +90,7 @@ div.triangle-down{
     border-top: 40px solid #2B2B2B;
 }
 
-/* Logo Styling */
-img#logo{
-    display: inline-block;
-    width: 20%;
-    height: 20%;
-}
+
 
 div#border{
     width: 6vw;
@@ -191,7 +187,7 @@ div.menu-icon div#three{
 /* Sticky Navigation Styling */
 header#sticky-header nav{
     /* Zeroing out index nav */
-    position: static;
+    position: relative;
     margin: 0;
     z-index: 0;
     background-color: #2B2B2B;
@@ -206,6 +202,24 @@ header#sticky-header nav ul{
 header#sticky-header div.menu-icon{
     position: static;
     margin: 1rem 1rem 1rem 0;
+}
+
+/* Logo Styling */
+
+img#logo{
+    display: inline-block;
+    vertical-align: middle;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    position: absolute;
+    left: 1rem;
+    top: 0.3rem;
+    /*margin: 0.5rem 0;*/
+}
+
+header#hero-header img#logo{
+    display: none;
 }
 
 main{
@@ -227,10 +241,16 @@ main div#profile-pic{
 main div.content{
     width: 90%;
     margin: 0 auto;
+    text-align: left;
 }
 
 main div.content h2{
     color: #18B1F9;
+    text-align: left;
+}
+
+main div.content #main-head{
+    text-align: center;
 }
 
 main div.content p{
@@ -345,10 +365,41 @@ p#attribution a{
         text-align: center;
     }
 
+    /* Logo Styling */
+    img#logo{
+        top: 0.5rem;
+    }
+
+    /* Side Nav Styling */
+    nav#side-nav{
+        display: inline-block;
+        width: 15%;
+        height: 100%;
+        position: static;
+        float: left;
+        background-color: #18B1F9;
+        margin: 0;
+    }
+
+    nav#side-nav ul,
+    nav#side-nav ul li{
+        display: block !important;
+        text-align: left;
+        font-family: Roboto, sans-serif;
+    }
+
     main{
         width: 65%;
         margin: 0 auto;
         overflow: hidden;
+    }
+
+    /* Version of main that appears as a column */
+    main#column-main{
+        display: inline-block;
+        float: left;
+        width: 70%;
+        margin-left: 5%;
     }
 
     /* Content Wrapper */
