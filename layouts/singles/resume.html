@@ -5,6 +5,11 @@
 </header>
 
 <nav id="side-nav">
+    <!-- For displaying the current position in the page -->
+    <p id="current-item" onclick="toggleDropdown();">
+        <span id="output">EDUCATION</span>
+        <img src="../../images/arrow-down-b.svg" alt="down arrow">
+    </p>
     <ul>
         <li><a href="#education">EDUCATION</a></li>
         <li>
@@ -22,7 +27,10 @@
 </nav>
 
 <main id="column-main">
+
     <div class="content">
+        <!-- TODO: Add path later -->
+        <a href="#" class="download-btn">DOWNLOAD AS PDF</a>
         {{ .Content }}
     </div>
 

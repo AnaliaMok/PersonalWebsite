@@ -9,13 +9,13 @@ layout = "resume"
 
 BS in Computer Science with a Mobile Development Minor, expected May 2020
 
-GPA: 3.90
+**GPA**: 3.90
 
-Dean's List: Fall 2015, Spring 2016, Fall 2016
+**Dean's List**: Fall 2015, Spring 2016, Fall 2016
 
-Courses
+**Courses:**
 
-- Computer Science I & II, Mechanics of Programming, CS Theory, Concepts of Computer Systems,
+- Computer Science I & II, Web & Mobile I & II, Mechanics of Programming, CS Theory, Concepts of Computer Systems,
 Analysis of Algorithms, Intro to Software Engineering
 - Discrete Math, Linear Algebra, Probability and Statistics
 
@@ -77,7 +77,7 @@ dynamic web page handling. SQLite3 and Python are handling information
 processing and storing.
 
 [comment]: # (List of links to Projects in the project main page)
-<!-- TODO: Change Links -->
+<!--- TODO: Change Links --->
 [1]: http://localhost:1313/portfolio/port-home
 [2]: http://localhost:1313/portfolio/port-home
 [3]: http://localhost:1313/portfolio/port-home
