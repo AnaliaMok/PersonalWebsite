@@ -367,6 +367,7 @@ main#column-main div.content h2 span,
 main#column-main div.content h3 span{
     font-weight: 500;
     font-size: 1em;
+    color: #2B2B2B;
 }
 
 main#column-main div.content ul{
@@ -492,6 +493,11 @@ p#attribution a{
         height: 100%;
         position: static;
         float: left;
+    }
+
+    nav#side-nav p{
+        /* Hide Current Item Display */
+        display: none;
     }
 
     nav#side-nav ul,
