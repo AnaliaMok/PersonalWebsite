@@ -16,6 +16,40 @@ html, body{
 }
 
 /* Header Styling - Background color applied to all headers except on home page */
+header{
+    text-align: center;
+    background-color: #2B2B2B;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    z-index: 10;
+}
+
+header nav#main-nav{
+    /* Make main navigation take up as much width as it NEEDS */
+    display: inline-block;
+    vertical-align: middle;
+    /*position: absolute;
+    top: 1rem;*/
+}
+
+/* Logo Styling */
+
+header img#logo{
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    width: 3.5rem;
+    height: 3.5rem;
+
+    /* Position towards the left end of the header */
+    position: fixed;
+    left: 1rem;
+    top: 0.75rem;
+
+}
 
 
 /* Home Page Header Styling */
@@ -86,7 +120,8 @@ div.triangle-down{
 }
 
 /* Navigation Styling */
-nav#main-nav{
+header nav#main-nav{
+    display: inline-block;
     text-align: center;
     vertical-align: middle;
     background-color: #2B2B2B;
@@ -138,6 +173,7 @@ header#hero-header nav#main-nav{
 
 header#hero-header nav#main-nav,
 header#hero-header div#header-content{
+    display: block;
     position: relative;
     z-index: 5;
 }
@@ -185,22 +221,20 @@ div.menu-icon div#three{
     width: 2em !important;
 }
 
-/* Logo Styling */
-
-header img#logo{
-    display: inline-block;
-    vertical-align: middle;
-    width: 3.5rem;
-    height: 3.5rem;
-    /*display: inline-block;
-    vertical-align: middle;
-
-
-    position: absolute;
-    left: 1rem;
-    top: 1rem;*/
-    /*margin: 0.5rem 0;*/
+/*
+    MAIN block styling
+    - Initially position below sticky header
+ */
+main{
+    position: relative;
+    top: 5rem;
 }
+
+main#home-main{
+    /* Position normally on the home pageo only */
+    position: static;
+}
+
 
 /* Home Page Main Content */
 main div#profile-pic{
@@ -229,10 +263,11 @@ div.home-content h2{
 
 /* Footer Styling */
 footer{
-    margin-top: 4rem;
+    /*margin-top: 4rem;*/
     padding: 1em;
     background-color: #2B2B2B;
-    clear: both;
+    position: relative;
+    top: 4rem;
 }
 
 footer div ul li a,
