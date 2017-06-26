@@ -1,39 +1,107 @@
-{{ partial "header.html" . }}
+<!DOCTYPE html>
+<html>
+<head>
+    <!--
+        File Name: index.html
+        Description: Home page/default page for entire site. Contains hero
+        header, and quick intro to self.
 
-<header id="sticky-header">
-    {{ partial "nav.html" . }}
-</header>
+        @author: Analia Mok
+    -->
+    <meta charset="utf-8">
+    <title>Analia Mok - Home Page</title>
+    <!-- Ion Icons -->
+    <link rel="stylesheet" href="assets/css/ionicons.css" />
+    <link rel="stylesheet" href="assets/css/style-1.1.css" />
 
-<nav id="side-nav">
-    <!-- For displaying the current position in the page -->
-    <p id="current-item" onclick="toggleDropdown();">
-        <span id="output">EDUCATION</span>
-        <img src="../../images/arrow-down-b.svg" alt="down arrow">
-    </p>
-    <ul>
-        <li><a href="#education">EDUCATION</a></li>
-        <li>
-            <a href="#skills">SKILLS</a>
+    <link href="https://fonts.googleapis.com/css?family=Oswald%7CRoboto" rel="stylesheet">
+    <script src="assets/js/main.js"></script>
+</head>
+<body>
+
+    <header>
+        <!-- Global Navigation -->
+        <nav id="main-nav" onclick="openMenu(this);">
+            <img src="assets/images/logo.svg" alt="Analia Mok" id="logo"/>
+            <div class="menu-icon">
+                <div id="one"></div>
+                <div id="two"></div>
+                <div id="three"></div>
+            </div>
+
             <ul>
-                <li><a href="#languages">LANGUAGES</a></li>
-                <li><a href="#software">SOFTWARE</a></li>
-                <li><a href="#technologies">TECHNOLOGIES</a></li>
-                <li><a href="#os">OS</a></li>
+                <li><a href="index.html" id="active">HOME</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+                <li><a href="port-home.html">PORTFOLIO</a></li>
+                <li><a href="dailyui/dailyui-home.html">DAILY UI</a></li>
+                <li><a href="#">CONTACT</a></li>
             </ul>
-        </li>
-        <li><a href="#projects-labs-span-all-code-is-available-upon-request-span">PROJECTS</a></li>
-        <li><a href="#experience">EXPERIENCE</a></li>
-    </ul>
-</nav>
+        </nav>
+    </header>
 
-<main id="column-main">
+    <!-- <nav id="side-nav"> -->
+        <!-- For displaying the current position in the page -->
+        <!-- <p id="current-item" onclick="toggleDropdown();">
+            <span id="output">EDUCATION</span>
+            <img src="../../images/arrow-down-b.svg" alt="down arrow">
+        </p>
+        <ul>
+            <li><a href="#education">EDUCATION</a></li>
+            <li>
+                <a href="#skills">SKILLS</a>
+                <ul>
+                    <li><a href="#languages">LANGUAGES</a></li>
+                    <li><a href="#software">SOFTWARE</a></li>
+                    <li><a href="#technologies">TECHNOLOGIES</a></li>
+                    <li><a href="#os">OS</a></li>
+                </ul>
+            </li>
+            <li><a href="#projects-labs-span-all-code-is-available-upon-request-span">PROJECTS</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+        </ul>
+    </nav> -->
 
-    <div class="content">
-        <!-- TODO: Add path later -->
-        <a href="#" class="download-btn">DOWNLOAD AS PDF</a>
-        {{ .Content }}
-    </div>
+    <!-- <main id="column-main">
 
-</main>
+        <div class="content"> -->
+            <!-- TODO: Add path later -->
+            <!-- <a href="#" class="download-btn">DOWNLOAD AS PDF</a>
 
-{{ partial "footer.html" . }}
+        </div>
+
+    </main> -->
+
+    <!-- Fat footer with same links as header, Copyright, & attribution link -->
+    <footer>
+        <div>
+            <ul>
+                <li><a href=".">HOME</a></li>
+                <li><a href="#">RESUME</a></li>
+            </ul>
+        </div>
+        <div id="mid-footer">
+            <h2>PORTFOLIO</h2>
+            <ul>
+                <li><a href="#">Computer Science</a></li>
+                <li><a href="#">Web Development</a></li>
+                <li><a href="#">UI</a></li>
+            </ul>
+        </div>
+        <div id="socials-container">
+            <h2>CONTACT</h2>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/AnaliaMok/"><span class="icon ion-social-linkedin-outline"></span></a></li>
+                <li><a href="https://github.com/AnaliaMok"><span class="icon ion-social-github"></span></a></li>
+                <!-- Link to Contact Form -->
+                <li><a href="#"><span class="icon ion-social-google"></span></a></li>
+            </ul>
+        </div>
+
+        <!-- <p id="attribution"><a href="http://ionicons.com/">Icons</a> by <a href="https://twitter.com/benjsperry
+    ">benjsperry</a> is licensed under <a href="https://opensource.org/licenses/MIT">MIT</a></p> -->
+        <p id="attribution"><a href="#">Attributions</a></p>
+        <p>Copyright &copy; Analia Mok 2017 All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
