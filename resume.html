@@ -43,14 +43,15 @@
     <!-- Side Navigation -->
     <nav id="side-nav">
         <!-- For displaying the current position in the page -->
-        <p id="current-item" onclick="toggleDropdown();">
+        <!-- <p id="current-item" onclick="toggleDropdown();">
             <span id="output">EDUCATION</span>
             <img src="assets/images/arrow-down-b.svg" alt="down arrow">
-        </p>
+        </p> -->
         <ul>
             <li><a href="#education">EDUCATION</a></li>
-            <li>
-                <a href="#skills">SKILLS</a>
+            <li onclick="toggleDropdown(this);" >
+                <a href="#skills" id="dropdown">SKILLS</a>
+                <img src="assets/images/chevron-down.svg" alt="Down Chevron" />
                 <ul>
                     <li><a href="#languages">LANGUAGES</a></li>
                     <li><a href="#software">SOFTWARE</a></li>
@@ -63,15 +64,15 @@
         </ul>
     </nav>
 
-    <!-- <main id="column-main">
+    <main>
 
-        <div class="content"> -->
+        <div class="content">
             <!-- TODO: Add path later -->
-            <!-- <a href="#" class="download-btn">DOWNLOAD AS PDF</a>
+            <a href="#" class="download-btn">DOWNLOAD AS PDF</a>
 
         </div>
 
-    </main> -->
+    </main>
 
     <!-- Fat footer with same links as header, Copyright, & attribution link -->
     <footer>

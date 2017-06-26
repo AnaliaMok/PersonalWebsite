@@ -47,7 +47,7 @@ header img#logo{
     /* Position towards the left end of the header */
     position: fixed;
     left: 1rem;
-    top: 0.75rem;
+    top: 0.3rem;
 
 }
 
@@ -161,18 +161,40 @@ header#hero-header nav#main-nav ul{
 }
 
 nav#side-nav ul{
+    display: inline-block;
     margin: 0;
     padding-left: 1rem;
 }
 
-nav#side-nav ul li,
+nav#side-nav ul li > ul li,
 nav#main-nav ul li{
     display: block;
 }
 
+nav#side-nav ul li{
+    display: inline-block;
+    vertical-align: middle;
+    list-style-type: none;
+    position: relative;
+}
+
+nav#side-nav ul li img{
+    width: 1em;
+    height: 1em;
+    display: inline-block;
+    color: #fcfcfc;
+}
+
 nav#side-nav ul li > ul{
     /* Nested Links */
+    display: none;
     padding-left: 1.5rem;
+    background-color: #189EDE;
+    position: absolute;
+    left: 0;
+    top: 2rem;
+    padding: 0.5rem 0;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .25);
 }
 
 nav#side-nav ul li a,
@@ -185,8 +207,12 @@ nav#main-nav ul li a{
 }
 
 nav#side-nav ul li a{
-    padding-left: 0.5rem;
+    display: inline-block;
     font-family: Roboto, sans-serif;
+}
+
+nav#side-nav ul a#dropdown{
+    padding: 0.2rem 0 0.2rem 1rem;
 }
 
 nav#side-nav ul li a:hover,
@@ -198,18 +224,18 @@ nav#main-nav ul li a#active{
     text-decoration: underline;
 }
 
-/* Side Nav Styling */
+/* Side Nav-Specific Styling
+    - Basic Styling Shared above
+*/
 nav#side-nav{
-    /*position: fixed;
-    top: 4.9rem;
-    left: 0;*/
-    position: relative;
-    top: 4.9rem;
+    position: fixed;
+    top: 4rem;
     left: 0;
-    bottom: 0;
-    display: inline-block;
+    display: block;
+    width: 100%;
     background-color: #18B1F9;
-    padding-bottom: 1rem;
+    text-align: left;
+    padding: 0.5rem 0;
 }
 
 nav#side-nav p img{
@@ -272,8 +298,9 @@ div.menu-icon div#three{
     - Initially position below sticky header
  */
 main{
+    background-color: #eee;
     position: relative;
-    top: 5rem;
+    top: 7rem;
 }
 
 main#home-main{
@@ -306,14 +333,33 @@ div.home-content h2{
     margin-top: 2rem;
 }
 
+/* PDF Download button*/
+main div.content a.download-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    color: #18B1F9;
+    border: 1px solid #18B1F9;
+    border-radius: 45px;
+    transition: all 0.5s;
+}
+
+main div.content a.download-btn:hover{
+    background-color: #18B1F9;
+    color: #FFF;
+}
+
 
 /* Footer Styling */
 footer{
     /*margin-top: 4rem;*/
+    width: 100%;
     padding: 1em;
     background-color: #2B2B2B;
     position: relative;
-    top: 4rem;
+    top: 5rem;
 }
 
 footer div ul li a,
@@ -420,6 +466,18 @@ p#attribution a{
     /* Hide Hamburger Menu */
     div.menu-icon{
         display: none;
+    }
+
+    /* Logo Positioning */
+    header img#logo{
+        position: fixed;
+        left: 1rem;
+        top: 0.75rem;
+    }
+
+    /* Side Nav Positioning */
+    nav#side-nav{
+        top: 4.8rem;
     }
 
     /* Home Page Main Content */

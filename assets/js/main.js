@@ -83,9 +83,8 @@ function openMenu(menu){
  * Toggle function for the collapsed sidenav menu
  * @return null
  */
-function toggleDropdown(){
-    var sideNav = document.getElementById("side-nav");
-    var list = sideNav.getElementsByTagName("ul")[0];
+function toggleDropdown(listItem){
+    var list = listItem.getElementsByTagName("ul")[0];
     var listState = list.style.display;
 
     if(listState == "none" || listState == ""){
