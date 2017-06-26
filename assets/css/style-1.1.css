@@ -130,24 +130,52 @@ header nav#main-nav{
     position: relative;
 }
 
+header#hero-header nav#main-nav{
+    background: transparent;
+    position: static;
+
+}
+
 nav#main-nav ul{
     display: none;
     margin: 0;
     padding: 0;
     list-style-type: none;
     text-align: right;
-    position: absolute;
+    position: fixed;
     right: 0;
-    top: 3.5rem;
+    top: 4.2rem;
     z-index: 100;
     /* Transparent gray background */
+    background-color: rgba(43, 43, 43, 1);
+}
+
+/* Hero Header positioning */
+header#hero-header nav#main-nav ul{
+    /*position: absolute;
+    right: 0;
+    top: 2.5rem;*/
+    z-index: 5;
+    /* Lowering Background Opacity */
     background-color: rgba(43, 43, 43, 0.8);
 }
 
+nav#side-nav ul{
+    margin: 0;
+    padding-left: 1rem;
+}
+
+nav#side-nav ul li,
 nav#main-nav ul li{
     display: block;
 }
 
+nav#side-nav ul li > ul{
+    /* Nested Links */
+    padding-left: 1.5rem;
+}
+
+nav#side-nav ul li a,
 nav#main-nav ul li a{
     display: block;
     padding: 0.2rem 1rem;
@@ -156,6 +184,12 @@ nav#main-nav ul li a{
     font-family: Oswald, sans-serif;
 }
 
+nav#side-nav ul li a{
+    padding-left: 0.5rem;
+    font-family: Roboto, sans-serif;
+}
+
+nav#side-nav ul li a:hover,
 nav#main-nav ul li a:hover{
     text-decoration: underline;
 }
@@ -164,31 +198,43 @@ nav#main-nav ul li a#active{
     text-decoration: underline;
 }
 
-/* Landing Page-Specific Nav Styles */
-header#hero-header nav#main-nav{
-    background-color: transparent;
+/* Side Nav Styling */
+nav#side-nav{
+    /*position: fixed;
+    top: 4.9rem;
+    left: 0;*/
     position: relative;
-    top: 1rem;
+    top: 4.9rem;
+    left: 0;
+    bottom: 0;
+    display: inline-block;
+    background-color: #18B1F9;
+    padding-bottom: 1rem;
 }
 
-header#hero-header nav#main-nav,
-header#hero-header div#header-content{
-    display: block;
-    position: relative;
-    z-index: 5;
+nav#side-nav p img{
+    /* TODO: Unhide chevron */
+    display: none;
 }
-
 
 /* Nav Menu Icon */
 div.menu-icon{
     display: inline-block;
     width: auto;
     height: auto;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Positioning In Hero Header */
+header#hero-header nav#main-nav div.menu-icon{
     position: absolute;
     top: 1rem;
     right: 1rem;
-    cursor: pointer;
-    text-align: center;
+    z-index: 10;
 }
 
 div.menu-icon div{
@@ -349,6 +395,19 @@ p#attribution a{
         background-color: transparent;
     }
 
+    header#hero-header nav#main-nav{
+        display: block;
+        position: relative;
+        z-index: 10;
+    }
+
+    header#hero-header nav#main-nav ul{
+        display: inline-block;
+        background-color: transparent;
+        z-index: 5;
+    }
+
+    header#hero-header nav#main-nav ul li,
     nav#main-nav ul li{
         display: inline-block;
     }
